@@ -1,16 +1,23 @@
 <template>
   <header class="cabecalho">
-    <h1>Loja Virtual</h1>
+    <div class="nav">
+      <div class="logo">👶 BELLY KIDS</div>
+
+      <button class="carrinho-btn" @click="$emit('abrir-carrinho')">
+        🛒 Carrinho
+        <span class="badge">{{ totalItens }}</span>
+      </button>
+    </div>
   </header>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps({
+  totalItens: {
+    type: Number,
+    default: 0
+  }
+})
 
-<style scoped>
-.cabecalho {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-</style>
+defineEmits(['abrir-carrinho'])
+</script>

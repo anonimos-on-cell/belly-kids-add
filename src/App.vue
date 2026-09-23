@@ -1,15 +1,9 @@
 <script setup lang="ts">
-import Cadastro from './View/Cadastro.vue'
-import Login from './View/Login.vue'
-import Mercado from './View/Mercado.vue'
-import Pagamento from './View/Pagamento.vue'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <Cadastro />
-  <Login />
-  <Mercado />
-  <Pagamento />
+  <RouterView />
 </template>
 
 <style scoped></style>
