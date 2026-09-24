@@ -1,3 +1,4 @@
+<script setup lang="ts">export default {}</script>
 <template>
   <footer>
     <h3>BELLY KIDS 👶</h3>

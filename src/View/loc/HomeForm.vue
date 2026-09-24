@@ -7,6 +7,9 @@ createApp({
     const aviso = Vue.ref(false)
     const carrinho = Vue.ref([])
 
+
+
+    // produtos
     const produtos = [
       {id:1,nome:
         'Conjunto Camisa+Bermuda Menino',
@@ -17,18 +20,85 @@ createApp({
         categoria:'Masculino',
         img:'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400'
       },
-
-      {id:2,nome:'Macacão Bebê Menino Algodão',desc:'Confortável, botões na frente',tam:'RN/6m/12m',valor:45.00,cat:'masculino',categoria:'Masculino',img:'https://images.unsplash.com/photo-1503948383309-5060c0432d05?w=400'},
-      {id:3,nome:'Vestido Floral Menina',desc:'Leve e elegante',tam:'RN/1-2a/3-4a',valor:68.50,cat:'feminino',categoria:'Feminino',img:'https://images.unsplash.com/photo-1519238180329-8d27728a2b76?w=400'},
-      {id:4,nome:'Conjunto Blusa+Shorts Menina',desc:'Tecido respirável',tam:'6m/18m/3-4a',valor:52.00,cat:'feminino',categoria:'Feminino',img:'https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?w=400'},
-      {id:5,nome:'Vestido Gestante Amamentação',desc:'Prático e confortável',tam:'M/G/GG',valor:89.90,cat:'maternidade',categoria:'Maternidade',img:'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400'},
-      {id:6,nome:'Kit Fraldas de Pano (5un)',desc:'Estampas sortidas',tam:'Único',valor:38.00,cat:'acessorios',categoria:'Acessórios',img:'https://images.unsplash.com/photo-1545034802-8e16d13aebc8?w=400'},
-      {id:7,nome:'Chupeta Silicone Ortopédica',desc:'Aprovada por pediatras',tam:'0-6m/6m+',valor:22.00,cat:'acessorios',categoria:'Acessórios',img:'https://images.unsplash.com/photo-1596870230751-ebdfcec623ac?w=400'},
-      {id:8,nome:'Mamadeira Anticólica',desc:'Bico de silicone',tam:'150ml/240ml',valor:28.50,cat:'acessorios',categoria:'Acessórios',img:'https://images.unsplash.com/photo-1585909606638-995e13321fa0?w=400'}
+      {
+        "id": 2,
+        "nome": "Macacão Bebê Menino Algodão",
+        "desc": "Confortável, botões na frente",
+        "tam": "RN/6m/12m",
+        "valor": 45.00,
+        "cat": "masculino",
+        "categoria": "Masculino",
+        "img": "https://unsplash.com"
+      },
+      {
+        "id": 3,
+        "nome": "Vestido Floral Menina",
+        "desc": "Leve e elegante",
+        "tam": "RN/1-2a/3-4a",
+        "valor": 68.50,
+        "cat": "feminino",
+        "categoria": "Feminino",
+        "img": "https://unsplash.com"
+      },
+      {
+        "id": 4,
+        "nome": "Conjunto Blusa+Shorts Menina",
+        "desc": "Tecido respirável",
+        "tam": "6m/18m/3-4a",
+        "valor": 52.00,
+        "cat": "feminino",
+        "categoria": "Feminino",
+        "img": "https://unsplash.com"
+      },
+      {
+        "id": 5,
+        "nome": "Vestido Gestante Amamentação",
+        "desc": "Prático e confortável",
+        "tam": "M/G/GG",
+        "valor": 89.90,
+        "cat": "maternidade",
+        "categoria": "Maternidade",
+        "img": "https://unsplash.com"
+      },
+      {
+        "id": 6,
+        "nome": "Kit Fraldas de Pano (5un)",
+        "desc": "Estampas sortidas",
+        "tam": "Único",
+        "valor": 38.00,
+        "cat": "acessorios",
+        "categoria": "Acessórios",
+        "img": "https://unsplash.com"
+      },
+      {
+        "id": 7,
+        "nome": "Chupeta Silicone Ortopédica",
+        "desc": "Aprovada por pediatras",
+        "tam": "0-6m/6m+",
+        "valor": 22.00,
+        "cat": "acessorios",
+        "categoria": "Acessórios",
+        "img": "https://unsplash.com"
+      },
+      {
+        "id": 8,
+        "nome": "Mamadeira Anticólica",
+        "desc": "Bico de silicone",
+        "tam": "150ml/240ml",
+        "valor": 28.50,
+        "cat": "acessorios",
+        "categoria": "Acessórios",
+        "img": "https://unsplash.com"
+      }
     ]
 
+
+
+
     const lista = Vue.computed(()=>filtro.value==='todos'?produtos:produtos.filter(p=>p.cat===filtro.value))
+
     const totalItens = Vue.computed(()=>carrinho.value.reduce((s,i)=>s+i.qtd,0))
+
     const totalGeral = Vue.computed(()=>carrinho.value.reduce((s,i)=>s+i.valor*i.qtd,0))
 
     const adicionar = (p) => {
@@ -41,9 +111,12 @@ createApp({
       carrinho.value[i].qtd += delta
       if(carrinho.value[i].qtd<=0) carrinho.value.splice(i,1)
     }
+  // Pré pagamento
     const finalizar = () => {
       if(!carrinho.value.length) return alert('Carrinho vazio!')
+      
       alert(`Compra finalizada! 🎉\nTotal: R$ ${totalGeral.value.toFixed(2)}\nObrigado por escolher a Encanto Infantil!`)
+
       carrinho.value = []
       abrindo.value = false
     }
@@ -118,6 +191,7 @@ createApp({
 </div>
 
 <div class="aviso" :class="{mostrar:aviso}">✅ Adicionado com sucesso!</div>
+
 </template>
 
 

@@ -5,52 +5,7 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
-    <style>
-      *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
-:root{--rosa:#ff6b9d;--roxo:#a855f7;--amarelo:#ffd166;--verde:#06d6a0;--escuro:#2d3748;--claro:#fef7fc;--sombra:0 4px 12px rgba(0,0,0,0.08)}
-body{background:var(--claro);color:var(--escuro);line-height:1.6}
-header{background:linear-gradient(135deg,var(--rosa),var(--roxo));color:white;padding:1rem 2rem;position:sticky;top:0;z-index:100}
-.nav{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-.logo{font-size:1.8rem;font-weight:bold}
-.carrinho-btn{background:rgba(255,255,255,0.2);border:none;color:white;padding:.6rem 1.2rem;border-radius:50px;cursor:pointer;display:flex;gap:.5rem}
-.carrinho-btn:hover{background:rgba(255,255,255,0.4)}
-.badge{background:var(--amarelo);color:var(--escuro);border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:.8rem}
-.hero{background:linear-gradient(rgba(255,255,255,0.85),rgba(255,255,255,0.85)),url('https://images.unsplash.com/photo-1519238263380-90c412d58efc?w=1200');background-size:cover;padding:4rem 2rem;text-align:center}
-.hero h1{font-size:2.5rem;margin-bottom:1rem;background:linear-gradient(90deg,var(--rosa),var(--roxo));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{font-size:1.2rem;max-width:700px;margin:0 auto;color:#4a5568}
-.filtros{max-width:1200px;margin:2rem auto;display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;padding:0 2rem}
-.filtro-btn{padding:.7rem 1.5rem;border:none;border-radius:50px;background:white;box-shadow:var(--sombra);cursor:pointer}
-.filtro-btn.ativo{background:linear-gradient(135deg,var(--rosa),var(--roxo));color:white}
-.grade{max-width:1200px;margin:0 auto 4rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:2rem;padding:0 2rem}
-.card{background:white;border-radius:16px;overflow:hidden;box-shadow:var(--sombra);transition:transform .3s}
-.card:hover{transform:translateY(-5px)}
-.card img{width:100%;height:220px;object-fit:cover}
-.card-body{padding:1.2rem}
-.tag{display:inline-block;font-size:.75rem;padding:.25rem .7rem;border-radius:50px;margin-bottom:.6rem;font-weight:600}
-.tag-masculino{background:#e6f0fa;color:#2b6cb0}
-.tag-feminino{background:#fce7f3;color:#be185d}
-.tag-maternidade{background:#fef3c7;color:#b45309}
-.tag-acessorios{background:#d1fae5;color:#047857}
-.card h3{font-size:1.1rem;font-weight:600;margin-bottom:.5rem}
-.desc{font-size:.85rem;color:#718096;margin-bottom:.5rem}
-.tam{font-size:.8rem;color:#a0aec0;margin-bottom:.5rem}
-.preco{font-size:1.4rem;font-weight:bold;color:var(--rosa);margin-bottom:1rem}
-.btn-add{width:100%;padding:.8rem;border:none;border-radius:10px;background:linear-gradient(135deg,var(--rosa),var(--roxo));color:white;font-weight:bold;cursor:pointer}
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:199;display:none}
-.overlay.ativo{display:block}
-.painel{position:fixed;top:0;right:0;width:100%;max-width:420px;height:100vh;background:white;box-shadow:-5px 0 30px rgba(0,0,0,0.15);padding:2rem;overflow-y:auto;transform:translateX(100%);transition:transform .3s;z-index:200}
-.painel.aberto{transform:translateX(0)}
-.fechar{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer}
-.item{padding:1rem 0;border-bottom:1px solid #eee}
-.qtd{display:flex;gap:.5rem;align-items:center;margin:.5rem 0}
-.qtd button{width:28px;height:28px;border-radius:50%;border:none;background:#eee;cursor:pointer}
-.total{margin-top:1rem;font-size:1.3rem;font-weight:bold;text-align:right}
-.btn-finalizar{width:100%;padding:1rem;border:none;border-radius:10px;background:var(--verde);color:white;font-weight:bold;cursor:pointer;margin-top:1rem}
-.aviso{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(100px);background:var(--verde);color:white;padding:1rem 2rem;border-radius:10px;font-weight:bold;transition:transform .3s;z-index:300}
-.aviso.mostrar{transform:translateX(-50%) translateY(0)}
-footer{background:var(--escuro);color:white;text-align:center;padding:2rem;margin-top:2rem}
-.copy{margin-top:1rem;font-size:.85rem;color:#aaa}
-</style>
+    <link rel="stylesheet" href="./src/assets/idedex-style.css">
   </head>
   <body>
     <div id="app"></div>

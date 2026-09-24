@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Mercado from '@/View/loc/Mercado.vue'
+import Mercado from '../View/MercadoMain.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
