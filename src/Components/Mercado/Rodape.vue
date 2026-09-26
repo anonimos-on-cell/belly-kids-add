@@ -63,8 +63,8 @@ export default {
 <style scoped>
 .rodape {
   background: linear-gradient(180deg, #fff3b0, #ffe8a8);
-  padding: 40px 20px 20px;
-  margin-top: 40px;
+  padding: 28px 20px 14px;
+  margin-top: 28px;
   border-radius: 24px 24px 0 0;
   box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
   color: #4a3f35;
@@ -72,45 +72,47 @@ export default {
 }
 
 .conteudo-rodape {
-  max-width: 620px;
+  max-width: 1120px;
   margin: 0 auto;
   display: grid;
-  gap: 25px;
+  grid-template-columns: 1.2fr 1fr 1.4fr 1fr;
+  gap: 24px;
+  align-items: start;
 }
 
 .bloco-marca {
-  text-align: center;
-  padding-bottom: 10px;
-  border-bottom: 1px dashed rgba(74, 63, 53, 0.15);
+  text-align: left;
 }
 
 .nome-loja {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #e88eaa;
   text-shadow: 2px 2px 0 rgba(168, 213, 255, 0.3);
 }
 
 .slogan {
-  margin: 6px 0;
+  margin: 5px 0;
+  font-size: 0.9rem;
   font-style: italic;
   color: #6b5c4f;
 }
 
 .faixa-etaria {
-  font-size: 0.95rem;
+  margin: 0;
+  font-size: 0.85rem;
   color: #7a6f60;
 }
 
 .bloco-links h3,
 .bloco-contato h3,
 .bloco-seguranca h3 {
-  font-size: 1.1rem;
-  margin-bottom: 12px;
+  font-size: 0.95rem;
+  margin: 0 0 8px;
   color: #5a5045;
   border-bottom: 2px solid #a8d5ff;
   display: inline-block;
-  padding-bottom: 4px;
+  padding-bottom: 3px;
 }
 
 .bloco-links ul {
@@ -120,44 +122,64 @@ export default {
 }
 
 .bloco-links li {
-  padding: 5px 0;
+  padding: 2px 0;
+  font-size: 0.85rem;
   color: #5a5045;
 }
 
 .item-contato {
-  padding: 5px 0;
-  line-height: 1.6;
+  margin: 0;
+  padding: 2px 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
 }
 
 .bloco-seguranca p {
-  padding: 4px 0;
+  margin: 0;
+  padding: 2px 0;
+  font-size: 0.85rem;
 }
 
 .faixa-final {
-  margin-top: 30px;
-  padding-top: 20px;
+  max-width: 1120px;
+  margin: 20px auto 0;
+  padding-top: 12px;
   border-top: 1px dashed rgba(74, 63, 53, 0.15);
   text-align: center;
 }
 
 .direitos {
   font-weight: 500;
-  margin-bottom: 5px;
+  margin: 0 0 4px;
+  font-size: 0.8rem;
   color: #5a5045;
 }
 
 .agradecimento {
-  font-size: 0.9rem;
+  margin: 0;
+  font-size: 0.78rem;
   color: #7a6f60;
 }
 
 /* Responsividade para celular */
-@media (min-width: 550px) {
+@media (max-width: 900px) {
   .conteudo-rodape {
     grid-template-columns: 1fr 1fr;
   }
   .bloco-marca {
     grid-column: 1 / -1;
+    text-align: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .conteudo-rodape {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .bloco-marca {
+    grid-column: auto;
   }
 }
 </style>
