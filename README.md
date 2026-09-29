@@ -47,31 +47,30 @@ npm run build
 npm run test:unit
 ```
 
-
 =============================================
-   ENCANTO INFANTIL - Loja Virtual Vue 3
+ENCANTO INFANTIL - Loja Virtual Vue 3
 =============================================
 
 📂 ESTRUTURA DO PROJETO:
 encanto-infantil/
 ├── public/
-│   └── index.html          → Arquivo base HTML
+│ └── index.html → Arquivo base HTML
 ├── src/
-│   ├── App.vue             → Componente principal
-│   ├── main.js             → Inicialização do Vue
-│   ├── components/         → Componentes separados
-│   │   ├── Cabecalho.vue
-│   │   ├── Filtros.vue
-│   │   ├── ProdutoCard.vue
-│   │   ├── Carrinho.vue
-│   │   └── Rodape.vue
-│   ├── assets/
-│   │   └── estilos.css     → Estilos globais
-│   └── dados/
-│       └── produtos.js     → Lista de produtos
-├── package.json            → Configuração do projeto
-├── vite.config.js          → Configuração do Vite
-└── LEIA-ME.txt             → Este arquivo
+│ ├── App.vue → Componente principal
+│ ├── main.js → Inicialização do Vue
+│ ├── components/ → Componentes separados
+│ │ ├── Cabecalho.vue
+│ │ ├── Filtros.vue
+│ │ ├── ProdutoCard.vue
+│ │ ├── Carrinho.vue
+│ │ └── Rodape.vue
+│ ├── assets/
+│ │ └── estilos.css → Estilos globais
+│ └── dados/
+│ └── produtos.js → Lista de produtos
+├── package.json → Configuração do projeto
+├── vite.config.js → Configuração do Vite
+└── LEIA-ME.txt → Este arquivo
 
 🚀 COMO EXECUTAR:
 
@@ -88,10 +87,11 @@ encanto-infantil/
 5. Abra no navegador o endereço mostrado (ex: http://localhost:3000)
 
 📦 PARA GERAR A VERSÃO FINAL:
-   npm run build
+npm run build
 → Os arquivos prontos para hospedar vão para a pasta "dist"
 
 ✨ FUNCIONALIDADES:
+
 - Código organizado em componentes Vue separados
 - Filtros por categoria
 - Carrinho de compras completo
@@ -100,6 +100,7 @@ encanto-infantil/
 - Produtos: RN a 4 anos, masculino, feminino, maternidade, acessórios
 
 🔧 PERSONALIZAÇÃO:
+
 - Adicionar produtos → edite: src/dados/produtos.js
 - Mudar cores → edite: src/assets/estilos.css (--rosa, --roxo, etc)
 - Mudar texto/contato → edite: src/components/Rodape.vue
@@ -107,10 +108,6 @@ encanto-infantil/
 
 📍 Santo Antônio de Jesus - BA
 📅 Atualizado: 21/09/2026
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -281,7 +278,6 @@ createApp({
 </body>
 </html>
 
-
 belly-kids/
 ├── index.html
 ├── App.vue
@@ -289,18 +285,18 @@ belly-kids/
 ├── style.css
 │
 └── components/
-    ├── Cabecalho.vue
-    ├── Filtros.vue
-    ├── ProdutoCard.vue
-    ├── Carrinho.vue
-    └── Rodape.vue
-
+├── Cabecalho.vue
+├── Filtros.vue
+├── ProdutoCard.vue
+├── Carrinho.vue
+└── Rodape.vue
 
     Cabecalho.vue
-│   │   ├── Filtros.vue
-│   │   ├── ProdutoCard.vue
-│   │   ├── Carrinho.vue
-│   │   └── Rodape.vue
+
+│ │ ├── Filtros.vue
+│ │ ├── ProdutoCard.vue
+│ │ ├── Carrinho.vue
+│ │ └── Rodape.vue
 
 Componentes
 Cabecalho.vue → logo e botão do carrinho.
@@ -312,20 +308,51 @@ App.vue → controla os componentes e a lógica principal.
 style.css → estilos de todo o projeto.
 main.js → inicializa o Vue.
 
-
-
 https://github.com/gitjosepaulo/Belly-Kids.git
 
-
 …ou crie um novo repositório na linha de comando.
-echo "# Belly-Kids" >> README.md 
-git init 
-git add README.md 
-git commit -m "primeiro commit" 
-git branch -M main 
+echo "# Belly-Kids" >> README.md
+git init
+git add README.md
+git commit -m "primeiro commit"
+git branch -M main
 git remote add origin https://github.com/gitjosepaulo/Belly-Kids.git
- git push -u origin main
+git push -u origin main
 …ou enviar um repositório existente a partir da linha de comando.
 git remote add origin https://github.com/gitjosepaulo/Belly-Kids.git
- git branch -M main 
+git branch -M main
 git push -u origin main
+
+###
+
+Para criar uma Pasta
+
+mkdir Nome da pasta;
+
+PS C:\Users\Aluno.CEPFSII047699\Desktop\projeto> mkdir backend-json
+
+    Diretório: C:\Users\Aluno.CEPFSII047699\Desktop\projeto
+
+Mode LastWriteTime Length Name
+
+---
+
+d----- 28/09/2026 19:40 backend-json
+
+###
+
+Para ver quais são os arquivos com horirio Dia/Mês/Ano
+PS C:\Users\Aluno.CEPFSII047699\Desktop\projeto> dir
+
+    Diretório: C:\Users\Aluno.CEPFSII047699\Desktop\projeto
+
+Mode LastWriteTime Length Name
+
+---
+
+d----- 28/09/2026 19:40 backend-json  
+d----- 25/09/2026 19:22 Belly-Kids
+
+###
+
+Para abrir o vs code

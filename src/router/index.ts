@@ -1,13 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import AppFormulario from '@/Components/AppFormulario.vue';
-import LojaPage from '@/View/LojaPage.vue';
-import ProdutosCertificados from '@/Components/Mercado/ProdutosCertificados.vue';
-import PagamentoSeguro from '@/Components/Mercado/PagamentoSeguro.vue';
-import CompraProtegida from '@/Components/Mercado/CompraProtegida.vue';
-import VerColecao from '@/Components/VerColecao.vue';
-import Sobre from '@/Components/Sobre.vue';
-import Contato from '@/Components/Contato.vue';
+import AppFormulario from 
+'../View/AppFormulario.vue';
+
+import LojaPage from 
+'@/View/Loja_belly_kids.vue';
+
+import ProdutosCertificados from 
+'@/Components/balle-kids/footer/ProdutosCertificados.vue';
+
+import PagamentoSeguro from 
+'@/Components/balle-kids/footer/PagamentoSeguro.vue';
+
+import CompraProtegida from 
+'@/Components/balle-kids/footer/CompraProtegida.vue';
+
+import VerColecao from '../Components/VerColecao.vue';
+import Sobre from '../Components/Sobre.vue';
+import Contato from '../Components/Contato.vue';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -56,6 +66,7 @@ const router = createRouter({
       name: 'Contato',
       component: Contato,
     },
+
   ],
 })
 

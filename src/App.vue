@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
-import Cabecalho from './Components/Mercado/cabecalho.vue';
-import Rodape from './Components/Mercado/rodape.vue';
+import Cabecalho from '@/Components/balle-kids/Header/cabecalho.vue';
+import Rodape from '@/Components/balle-kids/footer/rodape.vue';
 </script>
 
 <template>

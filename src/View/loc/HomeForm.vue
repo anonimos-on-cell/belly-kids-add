@@ -1,11 +1,13 @@
 <script setup lang="ts">
+import * as Vue from 'vue'
+
 const {createApp} = Vue
 createApp({
   setup(){
     const filtro = Vue.ref('todos')
     const abrindo = Vue.ref(false)
     const aviso = Vue.ref(false)
-    const carrinho = Vue.ref([])
+    const carrinho = Vue.ref<any[]>([])
 
 
 
@@ -101,13 +103,13 @@ createApp({
 
     const totalGeral = Vue.computed(()=>carrinho.value.reduce((s,i)=>s+i.valor*i.qtd,0))
 
-    const adicionar = (p) => {
-      const i = carrinho.value.findIndex(x=>x.id===p.id)
+    const adicionar = (p: any) => {
+      const i = carrinho.value.findIndex((x: any) => x.id===p.id)
       i!==-1 ? carrinho.value[i].qtd++ : carrinho.value.push({...p,qtd:1})
       aviso.value = true
       setTimeout(()=>aviso.value=false,2000)
     }
-    const mudar = (i,delta) => {
+    const mudar = (i: number,delta: number) => {
       carrinho.value[i].qtd += delta
       if(carrinho.value[i].qtd<=0) carrinho.value.splice(i,1)
     }
